@@ -33,7 +33,7 @@ export default function ProductCard(props) {
         <Typography variant="body2" color="text.secondary">
           Цена: {props.item.price}
           <br />
-          Бренд: {props.item.brand}
+          Автор: {props.item.author}
         </Typography>
       </CardContent>
       <CardActions>

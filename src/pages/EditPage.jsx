@@ -50,11 +50,11 @@ const EditPage = () => {
         <h2>Edit Page</h2>
         <form onSubmit={handleSubmit}>
           <TextField
-            value={productEdit.brand}
+            value={productEdit.author}
             onChange={(e) =>
-              setProductEdit({ ...productEdit, brand: e.target.value })
+              setProductEdit({ ...productEdit, author: e.target.value })
             }
-            label="Ваедите бренд"
+            label="Ваедите автор"
             variant="standard"
           />
           <TextField
@@ -91,19 +91,22 @@ const EditPage = () => {
             variant="standard"
           />
           <FormControl fullWidth>
-            <InputLabel id="color-select">Цвет</InputLabel>
+            <InputLabel id="genre-select">Жанр</InputLabel>
             <Select
-              value={productEdit.color}
+              value={productEdit.genre}
               onChange={(e) =>
-                setProductEdit({ ...productEdit, color: e.target.value })
+                setProductEdit({ ...productEdit, genre: e.target.value })
               }
-              labelId="color-select"
-              label="Выберите цвет"
+              labelId="genre-select"
+              label="Выберите Жанр"
             >
-              <MenuItem value="black">Черный</MenuItem>
-              <MenuItem value="white">Белый</MenuItem>
-              <MenuItem value="gray">Серый</MenuItem>
-              <MenuItem value="space-gray">Темно-серый</MenuItem>
+              <MenuItem value="romance-novel">Любовный роман</MenuItem>
+              <MenuItem value="western">Вестерн</MenuItem>
+              <MenuItem value="horror">Ужасы</MenuItem>
+              <MenuItem value="classic">Классическая литература</MenuItem>
+              <MenuItem value="crime">Криминальная проза</MenuItem>
+              <MenuItem value="dictionary">Словарь</MenuItem>
+              <MenuItem value="autobiography">Автобиография</MenuItem>
             </Select>
           </FormControl>
           <Button color="success" variant="contained" type="submit">

@@ -28,9 +28,9 @@ export default function AdminTable() {
             <TableCell>#</TableCell>
             <TableCell>Name</TableCell>
             <TableCell align="right">Image</TableCell>
-            <TableCell align="right">Brand</TableCell>
+            <TableCell align="right">Author</TableCell>
             <TableCell align="right">Price</TableCell>
-            <TableCell align="right">Color</TableCell>
+            <TableCell align="right">Genre</TableCell>
             <TableCell align="right">Description</TableCell>
           </TableRow>
         </TableHead>
@@ -62,9 +62,9 @@ export default function AdminTable() {
               <TableCell align="right">
                 {<img width={80} src={item.image} alt="img-product" />}
               </TableCell>
-              <TableCell align="right">{item.brand}</TableCell>
+              <TableCell align="right">{item.author}</TableCell>
               <TableCell align="right">{item.price}</TableCell>
-              <TableCell align="right">{item.color}</TableCell>
+              <TableCell align="right">{item.genre}</TableCell>
               <TableCell align="right">{item.description}</TableCell>
             </TableRow>
           ))}

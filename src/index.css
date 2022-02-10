@@ -27,7 +27,7 @@ a {
 .add-edit-page form {
   display: flex;
   flex-direction: column;
-  height: 330px;
+  height: 400px;
   justify-content: space-between;
 }
 

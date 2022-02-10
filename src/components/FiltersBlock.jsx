@@ -17,7 +17,7 @@ const FiltersBlock = () => {
   const { getProducts } = useContext(ClientContext);
 
   const [searchValue, setSearchValue] = useState(search.get("q") || "");
-  const [colorValue, setColorValue] = useState(search.get("color") || "");
+  const [genreValue, setGenreValue] = useState(search.get("genre") || "");
   const [priceValue, setPriceValue] = useState(search.get("price_lte" || ""));
 
   const filterProducts = (key, value) => {
@@ -25,7 +25,7 @@ const FiltersBlock = () => {
     let newPath = `${window.location.pathname}?${search.toString()}`;
     navigate(newPath);
     setSearchValue(search.get("q") || "");
-    setColorValue(search.get("color") || "");
+    setGenreValue(search.get("color") || "");
     setPriceValue(search.get("price_lte" || ""));
 
     getProducts();
@@ -33,7 +33,7 @@ const FiltersBlock = () => {
   const resetFilter = () => {
     navigate("/");
     setSearchValue("");
-    setColorValue("");
+    setGenreValue("");
     setPriceValue("");
     getProducts();
   };
@@ -47,17 +47,20 @@ const FiltersBlock = () => {
       />
       <div>
         <FormControl fullWidth>
-          <InputLabel id="color-select">Цвет</InputLabel>
+          <InputLabel id="genre-select">Жанр</InputLabel>
           <Select
-            value={colorValue}
-            onChange={(e) => filterProducts("color", e.target.value)}
-            labelId="color-select"
-            label="Выберите цвет"
+            value={genreValue}
+            onChange={(e) => filterProducts("genre", e.target.value)}
+            labelId="genre-select"
+            label="Выберите жанр"
           >
-            <MenuItem value="black">Черный</MenuItem>
-            <MenuItem value="white">Белый</MenuItem>
-            <MenuItem value="gray">Серый</MenuItem>
-            <MenuItem value="space-gray">Темно-серый</MenuItem>
+            <MenuItem value="romance-novel">Любовный роман</MenuItem>
+            <MenuItem value="western">Вестерн</MenuItem>
+            <MenuItem value="horror">Ужасы</MenuItem>
+            <MenuItem value="classic">Классическая литература</MenuItem>
+            <MenuItem value="crime">Криминальная проза</MenuItem>
+            <MenuItem value="dictionary">Словарь</MenuItem>
+            <MenuItem value="autobiography">Автобиография</MenuItem>
           </Select>
         </FormControl>
       </div>

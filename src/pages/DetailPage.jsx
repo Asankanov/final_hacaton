@@ -39,10 +39,10 @@ const DetailPage = () => {
             <h3>{detail.name}</h3>
             <ul>
               <li>
-                Бренд: <strong>{detail.brand}</strong>
+                Автор: <strong>{detail.author}</strong>
               </li>
               <li>
-                Цвет: <strong>{detail.color}</strong>
+                Жанр: <strong>{detail.genre}</strong>
               </li>
               <li>
                 Цена: <strong>{detail.price}</strong>
