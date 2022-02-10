@@ -6,7 +6,7 @@ const CartPage = () => {
   return (
     <div>
       <Container>
-        <h2>Cart page</h2>
+        <h2 style={{ color: "white" }}>Cart page</h2>
         <CartTable />
       </Container>
     </div>

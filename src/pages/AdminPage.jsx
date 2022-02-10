@@ -7,7 +7,7 @@ const AdminPage = () => {
   return (
     <div>
       <Container>
-        <h2>Admin Page</h2>
+        <h2 style={{ color: "white" }}>Admin Page</h2>
         <AdminTable />
       </Container>
       <ToastContainer />

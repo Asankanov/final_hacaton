@@ -47,7 +47,7 @@ const EditPage = () => {
   return (
     <div className="add-edit-page">
       <Container>
-        <h2>Edit Page</h2>
+        <h2 style={{ color: "white" }}>Edit Page</h2>
         <form onSubmit={handleSubmit}>
           <TextField
             value={productEdit.author}

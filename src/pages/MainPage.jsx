@@ -16,7 +16,7 @@ const MainPage = () => {
   return (
     <div>
       <Container>
-        <h2>Main Page</h2>
+        <h2 style={{ color: "white" }}>Main Page</h2>
         <FiltersBlock />
         <Grid container spacing={4}>
           {products.map((item) => (

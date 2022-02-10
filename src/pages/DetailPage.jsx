@@ -26,11 +26,10 @@ const DetailPage = () => {
   return (
     <div>
       <Container>
-        {/* <Link to="/">Домой</Link> */}
         <Button onClick={() => navigate(-1)} variant="text">
           Назад
         </Button>
-        <h2>Detail page</h2>
+        <h2 style={{ color: "white" }}>Detail page</h2>
         <div className="detail-page">
           <div className="detail-left-img">
             <img src={detail.image} alt="detail-img" />

@@ -17,7 +17,7 @@ import { ShoppingBasket } from "@mui/icons-material";
 import { ClientContext } from "../contexts/ClientProvider";
 
 const pages = ["Products", "Pricing", "Blog"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const settings = ["Account", "Logout"];
 
 const Navbar = () => {
   const { cartCount } = React.useContext(ClientContext);
@@ -57,7 +57,7 @@ const Navbar = () => {
               component="div"
               sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
             >
-              GENATOLII SRTORE
+              Book Haus
             </Typography>
           </Link>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -102,7 +102,7 @@ const Navbar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            GENATOLII STORE
+            Book Haus
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Link to="/admin-panel/add">
@@ -110,7 +110,7 @@ const Navbar = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                ADD PRODUCT
+                ADD
               </Button>
             </Link>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
@@ -119,7 +119,7 @@ const Navbar = () => {
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
-                  ADMIN PANEL
+                  ADMIN
                 </Button>
               </Link>
             </Box>
@@ -132,6 +132,7 @@ const Navbar = () => {
                 </Badge>
               </IconButton>
             </Link>
+
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
@@ -160,6 +161,26 @@ const Navbar = () => {
               ))}
             </Menu>
           </Box>
+          {/* <Box sx={{ flexGrow: 0 }}>
+            {user ? (
+              <>
+                <IconButton size="small" color="inherit">
+                  {user.displayName}
+                </IconButton>
+                <IconButton sx={{ p: 0 }}>
+                  <Avatar alt={user.displayName} src={user.photoURL} />
+                </IconButton>
+                <IconButton onClick={logout} size="large" color="inherit">
+                  <Logout />
+                </IconButton>
+              </>
+            ) : (
+              <IconButton size="small" color="inherit">
+                {renderMobileMenu}
+                {renderMenu}
+              </IconButton>
+            )}
+          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>

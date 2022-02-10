@@ -44,15 +44,26 @@ const FiltersBlock = () => {
         onChange={(event) => filterProducts("q", event.target.value)}
         variant="outlined"
         label="Живой поиск ..."
+        InputLabelProps={{ className: "textfieldLabel" }}
+        sx={{ input: { color: "white" } }}
       />
       <div>
         <FormControl fullWidth>
-          <InputLabel id="genre-select">Жанр</InputLabel>
+          <InputLabel
+            id="genre-select"
+            InputLabelProps={{ className: "textfieldLabel" }}
+            style={{ color: "white" }}
+            sx={{ input: { color: "white" } }}
+          >
+            Жанр
+          </InputLabel>
           <Select
+            style={{ color: "white" }}
             value={genreValue}
             onChange={(e) => filterProducts("genre", e.target.value)}
             labelId="genre-select"
             label="Выберите жанр"
+            InputLabelProps={{ className: "textfieldLabel" }}
           >
             <MenuItem value="romance-novel">Любовный роман</MenuItem>
             <MenuItem value="western">Вестерн</MenuItem>
@@ -66,10 +77,11 @@ const FiltersBlock = () => {
       </div>
       <div>
         <Slider
+          value={priceValue}
           onChange={(e) => filterProducts("price_lte", e.target.value)}
           valueLabelDisplay="auto"
-          max={200000}
-          step={1000}
+          max={5000}
+          step={100}
         />
       </div>
       <div>
