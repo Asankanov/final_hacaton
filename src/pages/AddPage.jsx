@@ -104,6 +104,7 @@ const AddPage = () => {
             <InputLabel
               id="genre-select"
               InputLabelProps={{ className: "textfieldLabel" }}
+              style={{ color: "white" }}
             >
               Жанр
             </InputLabel>
@@ -115,6 +116,7 @@ const AddPage = () => {
               labelId="genre-select"
               label="Выберите жанр"
               InputLabelProps={{ className: "textfieldLabel" }}
+              style={{ color: "white" }}
             >
               <MenuItem value="romance-novel">Любовный роман</MenuItem>
               <MenuItem value="western">Вестерн</MenuItem>
